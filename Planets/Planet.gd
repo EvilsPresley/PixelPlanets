@@ -8,6 +8,8 @@ var original_colors
 
 func _ready():
 	original_colors = get_colors()
+	for c in get_children():
+		c.material.resource_local_to_scene = true
 
 func set_pixels(_amount):
 	pass
@@ -26,7 +28,7 @@ func get_multiplier(mat):
 	return (round(mat.get_shader_parameter("size")) * 2.0) / mat.get_shader_parameter("time_speed")
 	
 func _process(delta):
-	time += delta	
+	time += delta
 	if !override_time:
 		update_time(time)
 

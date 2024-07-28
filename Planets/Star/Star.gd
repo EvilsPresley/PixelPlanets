@@ -27,6 +27,7 @@ var starflarecolor1 = Gradient.new()
 var starflarecolor2 = Gradient.new()
 
 func _ready():
+	super()
 	starcolor1.offsets = [0, 0.33, 0.66, 1.0]
 	starcolor2.offsets = [0, 0.33, 0.66, 1.0]
 	starflarecolor1.offsets = [0.0, 1.0]
